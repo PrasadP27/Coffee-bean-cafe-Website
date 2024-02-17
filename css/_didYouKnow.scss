@@ -1,0 +1,39 @@
+#didYouKnow {
+    background: url("https://images.pexels.com/photos/6205600/pexels-photo-6205600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.573);
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    padding: 50px 80px;
+
+    h1{
+        -webkit-text-stroke: 1px $primary-color;
+
+        span {
+            color: $second-color;
+        }
+    }
+
+    .dYK-container {
+        @include flexbox(center, space-around);
+        padding: 50px 5px 10px;
+
+        .dYK-content {
+            @include flexbox(center,null);
+            flex-direction: column;
+
+            img {
+                height: 80px;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                color: $second-color;
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+            }
+        }
+    }
+}

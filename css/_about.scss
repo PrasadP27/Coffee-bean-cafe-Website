@@ -12,11 +12,13 @@
         font-size: 1.9rem;
         line-height: 2;
         color: black;
+        font-family: "Montserrat", sans-serif;
       }
       p{
         color: $second-color;
         margin: 5px 5px 20px;
       }
+      
       .btn {
         text-decoration: none;
         color: #000;
@@ -40,6 +42,10 @@
         .icons {
             color: $second-color;
             border: 3px solid $second-color;
+            
+            h3{
+              font-family: "Montserrat", sans-serif;
+            }
         }
       }
     }
