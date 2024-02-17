@@ -1,0 +1,35 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 20px;
+  @include flexbox(center, space-between);
+  font-family: "Bebas Neue", sans-serif;
+  z-index: 99;
+
+  &.sticky {
+    margin: 15px 40px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid $second-color;
+    background-color: #000000dc;
+  }
+
+  .logo img {
+    width: 200px;
+  }
+
+  .navbar {
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      font-size: 1.2rem;
+      padding: 15px;
+      margin: 5px;
+      &:hover {
+        color: $second-color;
+      }
+    }
+  }
+}
