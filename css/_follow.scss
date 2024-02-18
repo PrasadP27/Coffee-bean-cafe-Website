@@ -1,0 +1,48 @@
+#follow {
+  padding: 0;
+  display: flex;
+
+  .follow-content {
+    width: 40%;
+    background: url("https://androthemes.com/themes/html/nescafew/assets/img/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      -webkit-text-stroke-color: $primary-color;
+      font-size: 3rem;
+    }
+
+    .insta {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      background: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn {
+      text-align: center;
+      margin: 50px auto;
+      width: 50%;
+      font-size: 1.2rem;
+    }
+  }
+
+  .follow-img {
+    width: 60%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
