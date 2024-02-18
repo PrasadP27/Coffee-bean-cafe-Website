@@ -30,7 +30,7 @@ $border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
 
 section {
   width: 100%;
-  padding: 100px 80px 150px;
+  padding: 100px 80px 130px;
 }
 
 section:nth-child(1), #didYouKnow{
@@ -73,7 +73,7 @@ section:nth-child(1), #didYouKnow{
 @import "heroSection";
 @import "about";
 @import "didYouKnow";
-// @import "menu";
+@import "menu";
 // @import "location";
 // @import "review";
 // @import "book";

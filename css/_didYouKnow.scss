@@ -19,22 +19,23 @@
     .dYK-container {
         @include flexbox(center, space-around);
         padding: 50px 5px 10px;
-        // border: 1px solid #fff;
         flex-wrap: wrap;
 
         .dYK-content {
-            // border: 1px solid #fff;
             @include flexbox(center,null);
             flex-direction: column;
             text-align: center;
             flex: 1 0 180px;
             margin-top: 25px;
-
+            
             img {
                 height: 80px;
                 margin-bottom: 20px;
             }
-
+            &:hover img{
+                transform: translateY(-10px);
+            }
+            
             h3 {
                 color: $second-color;
                 text-transform: uppercase;
