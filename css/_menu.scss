@@ -6,9 +6,10 @@
         position: absolute;
         right: 0;
         top: 100px;
-        filter: brightness(60%);
+        filter: brightness(70%);
         z-index: -5;
         transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        // filter: drop-shadow(2px 2px 5px);
     }
 
     .menu-container{

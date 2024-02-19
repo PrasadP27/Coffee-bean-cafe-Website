@@ -1,7 +1,9 @@
 #about {
   overflow: hidden;
+  background-color: $third-color;
 
   .about-container {
+    margin-top: 20px;
     @include flexbox(center, space-between);
 
     .content {

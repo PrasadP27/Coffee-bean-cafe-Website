@@ -10,7 +10,6 @@
 
     h1{
         -webkit-text-stroke: 1px $primary-color;
-
         span {
             color: $second-color;
         }
@@ -27,20 +26,25 @@
             text-align: center;
             flex: 1 0 180px;
             margin-top: 25px;
-            
-            img {
-                height: 80px;
-                margin-bottom: 20px;
-            }
-            &:hover img{
-                transform: translateY(-10px);
-            }
-            
-            h3 {
-                color: $second-color;
-                text-transform: uppercase;
-                font-family: "Montserrat", sans-serif;
-                line-height: 1.4;
+
+            a{
+                text-decoration: none;
+
+                img {
+                    height: 80px;
+                    margin-bottom: 20px;
+                }
+                &:hover img{
+                    transform: translateY(-10px);
+                    scale: 1.1;
+                }
+                
+                h3 {
+                    color: $second-color;
+                    text-transform: uppercase;
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 1.4;
+                }
             }
         }
     }
