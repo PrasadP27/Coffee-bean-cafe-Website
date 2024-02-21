@@ -3,11 +3,11 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.453);
+  background-color: rgba(0, 0, 0, 0.533);
   background-blend-mode: darken;
   background-attachment: fixed;
 
-  .footer-logo{
+  .footer-logo {
     width: 250px;
     margin: 30px;
   }
@@ -19,7 +19,6 @@ footer {
     padding: 2rem;
 
     .box {
-
       h3 {
         text-transform: capitalize;
         font-size: 1.9rem;
@@ -46,12 +45,12 @@ footer {
         }
 
         &:hover {
-            color: $second-color;
+          color: $second-color;
 
-            img {
-                padding-right: 20px;
-                scale: 1.3;
-            }
+          img {
+            padding-right: 20px;
+            scale: 1.3;
+          }
         }
       }
     }

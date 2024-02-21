@@ -4,6 +4,19 @@ window.addEventListener("scroll", function () {
   navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 
+//for swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 3500,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 //gsap
 
 //about img
@@ -22,7 +35,6 @@ window.addEventListener("scroll", function () {
 // })
 
 
-
 //menu
 let t1 = gsap.timeline()
 
@@ -36,3 +48,4 @@ t1.from('#menu .bg-img', {
     },
     x: '30%',
 })
+

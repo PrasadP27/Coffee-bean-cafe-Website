@@ -1,0 +1,87 @@
+// .swiper-slide img {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+#review {
+  background-color: $third-color;
+
+  .swiper {
+    width: 90%;
+    height: 100%;
+    padding-top: 20px;
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      padding: 50px;
+      border: 3px solid $primary-color;
+      border-radius: $border-radius;
+      position: relative;
+      display: flex;
+
+      .quoteLeft,
+      .quoteRight {
+        height: 40px;
+        position: absolute;
+      }
+
+      .quoteLeft {
+        top: 30px;
+        left: 30px;
+      }
+
+      .quoteRight {
+        bottom: 30px;
+        right: 30px;
+      }
+
+      .review-content {
+        h2 {
+          font-size: 2rem;
+          font-family: "Montserrat", sans-serif;
+          padding: 10px;
+        }
+
+        img {
+          height: 100px;
+          border-radius: 50%;
+          border: 3px solid $second-color;
+        }
+
+        .stars {
+          padding: 10px;
+
+          img {
+            border: 0.5px solid $primary-color;
+            height: 20px;
+            border: none;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          padding: 10px 20px;
+          color: $second-color;
+        }
+      }
+    }
+
+    &:hover {
+      .swiper-slide {
+        border: 3px dashed $second-color;
+
+        .quoteLeft {
+          top: 0;
+        }
+  
+        .quoteRight {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

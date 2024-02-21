@@ -16,18 +16,18 @@
         color: black;
         font-family: "Montserrat", sans-serif;
       }
-      p{
+      p {
         color: $second-color;
         margin: 5px 5px 20px;
       }
-      
+
       .btn {
         color: #000;
         border: 3px solid #000;
 
         &:hover {
-            color: $second-color;
-            border: 3px dashed $second-color
+          color: $second-color;
+          border: 3px dashed $second-color;
         }
       }
 
@@ -39,12 +39,12 @@
         padding: 10px 2px;
 
         .icons {
-            color: $second-color;
-            border: 3px solid $second-color;
-            
-            h3{
-              font-family: "Montserrat", sans-serif;
-            }
+          color: $second-color;
+          border: 3px solid $second-color;
+
+          h3 {
+            font-family: "Montserrat", sans-serif;
+          }
         }
       }
     }

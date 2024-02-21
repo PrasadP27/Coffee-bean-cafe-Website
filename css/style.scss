@@ -79,12 +79,16 @@ section:nth-child(1), #didYouKnow{
   }
 }
 
+
+::selection {
+  background-color: #c6a17971;
+}
+
 @import "header";
 @import "heroSection";
 @import "about";
 @import "didYouKnow";
 @import "menu";
-// @import "review";
-// @import "book";
+@import "review";
 @import "follow";
 @import "footer";
