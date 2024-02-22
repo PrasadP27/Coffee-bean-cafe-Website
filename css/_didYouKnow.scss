@@ -29,8 +29,9 @@
 
             a{
                 text-decoration: none;
-
+                
                 img {
+                    transition: all 0.6s;
                     height: 80px;
                     margin-bottom: 20px;
                 }

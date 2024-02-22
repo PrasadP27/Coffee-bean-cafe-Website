@@ -1,4 +1,6 @@
 #home {
+    overflow: hidden;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     height: 100vh;
     background-image: url("https://wallpapercave.com/wp/wp2352852.jpg");
     background-position: center;
@@ -39,6 +41,7 @@
     }
 
     h1 {
+        z-index: 5;
         color: white;
         font-size: 6rem;
         font-weight: 700; 

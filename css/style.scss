@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  transition: 0.6s;
 }
 
 html,
@@ -67,6 +66,7 @@ section:nth-child(1), #didYouKnow{
   font-weight: 600;
   text-transform: capitalize;
   color: $primary-color;
+  transition: 0.6s;
 
   &:hover {
     border-radius: $border-radius-hover;
