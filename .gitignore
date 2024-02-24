@@ -1,3 +1,5 @@
-style.css
-style.css.map
+node_modules
+public/sass/style.css
+public/sass/style.css.map
+public/sass/css
 *.txt

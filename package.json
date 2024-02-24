@@ -1,0 +1,20 @@
+{
+  "name": "coffee-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass -w ./public/sass/style.scss ./public/sass/css/style.css",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "sass": "^1.71.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

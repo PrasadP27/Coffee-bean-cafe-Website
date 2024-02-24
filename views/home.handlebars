@@ -1,0 +1,151 @@
+<main>
+
+    <section id="home">
+        <img src="assets/images/logo.png" alt="">
+        <h1>Fresh Coffee in the morning</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint mollitia, soluta, sequi veniam nemo animi
+            quia temporibus autem cum excepturi odio a.</p>
+        <a href="booking" class="btn">Book Now</a>
+    </section>
+
+    <section id="about">
+        <h1 class="heading"> about us <span>why choose us</span> </h1>
+
+        <div class="about-container">
+
+            <div class="content">
+                <h3 class="title">what's make our coffee special!</h3>
+                <p>&emsp; &emsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse et commodi, ad,
+                    doloremque
+                    obcaecati maxime quam minima dolore mollitia saepe quos, debitis incidunt. Itaque possimus
+                    adipisci ipsam harum at autem.</p>
+                <a href="#" class="btn">read more</a>
+                <div class="icons-container">
+                    <div class="icons btn">
+                        <img src="assets/images/about-icon-1.png" alt="">
+                        <h3>quality coffee</h3>
+                    </div>
+                    <div class="icons btn">
+                        <img src="assets/images/about-icon-2.png" alt="">
+                        <h3>our branches</h3>
+                    </div>
+                    <div class="icons btn">
+                        <img src="assets/images/about-icon-3.png" alt="">
+                        <h3>free delivery</h3>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- <video autoplay>
+                <source src="assets/images/about-vid (540p).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> --}}
+
+            <video class="about-video" autoplay muted loop src="assets/images/about-vid (540p).mp4"></video>
+        </div>
+    </section>
+
+    <section id="didYouKnow">
+        <h1 class="heading"> did you know? <span>about our restaurant</span> </h1>
+
+        <div class="dYK-container">
+            <div class="dYK-content">
+                <a href="#menu">
+                    <img src="assets/images/dYK-img1.png" alt="">
+                    <h3>famous for our coffee</h3>
+                </a>
+            </div>
+            <div class="dYK-content">
+                <a href="#booking">
+                    <img src="assets/images/dYK-img2.png" alt="">
+                    <h3>Online table booking</h3>
+                </a>
+            </div>
+            <div class="dYK-content">
+                <a href="#">
+                    <img src="assets/images/dYK-img3.png" alt="">
+                    <h3>open everyday 10am - 10pm</h3>
+                </a>
+            </div>
+            <div class="dYK-content">
+                <a href="#location">
+                    <img src="assets/images/dYK-img4.png" alt="">
+                    <h3>90 Russell St., Suite 500, Annapolis, MD 21401</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <img src="assets/images/menu-bg.png" alt="coffee" class="bg-img">
+
+        <h1 class="heading">Our menu<span>popular items</span> </h1>
+
+        <div class="menu-container">
+
+            {{#each menuItems}}
+            <div class="menu-content">
+                <img src="assets/images/{{image}}.png" alt="cup{{image}}">
+                <div class="info">
+                    <h3>{{title}}</h3>
+                    <p>{{description}}</p>
+                </div>
+                <h3 class="price-tag">₹{{price}}</h3>
+            </div>
+            {{/each}}
+
+        </div>
+
+        <a href="menu" class="btn">Full-Menu</a>
+    </section>
+
+    <section id="review">
+
+        <img src="assets/images/review-bg.png" alt="review-bg" class="review-bg">
+
+        <h1 class="heading">review <span>what people say</span></h1>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                {{#each reviewData}}
+                <div class="swiper-slide">
+                    <img src="assets/icons/quote-left.svg" alt="" class="quoteLeft">
+                    <div class="review-content">
+                        <h2>{{reviewName}}</h2>
+                        <img src="assets/images/{{reviewImg}}.png" alt="{{review-img}}">
+                        <div class="stars">
+                            <img src="assets/icons/{{star1}}-star.svg" alt="{{star1}}-star">
+                            <img src="assets/icons/{{star2}}-star.svg" alt="{{star2}}-star">
+                            <img src="assets/icons/{{star3}}-star.svg" alt="{{star3}}-star">
+                            <img src="assets/icons/{{star4}}-star.svg" alt="{{star4}}-star">
+                            <img src="assets/icons/{{star5}}-star.svg" alt="{{star5}}-star">
+                        </div>
+                        <p>{{review}}</p>
+                    </div>
+                    <img src="assets/icons/quote-right.svg" alt="" class="quoteRight">
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="follow">
+        <div class="follow-content">
+            <h1 class="heading">Follow us on</h1>
+            <h1 class="insta">Instagram</h1>
+            <a href="#" class="btn">Follow Us</a>
+        </div>
+        <div class="follow-img">
+            <img src="assets/images/follow-img1.jpg" alt="img1">
+            <img src="assets/images/follow-img2.jpg" alt="img2">
+            <img src="assets/images/follow-img3.jpg" alt="img3">
+            <img src="assets/images/follow-img4.jpg" alt="img4">
+            <img src="assets/images/follow-img5.jpg" alt="img5">
+            <img src="assets/images/follow-img6.jpg" alt="img6">
+        </div>
+    </section>
+
+</main>
