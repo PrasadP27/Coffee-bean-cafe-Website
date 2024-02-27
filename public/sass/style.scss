@@ -15,12 +15,23 @@ body {
   scroll-padding-top: 10px;
 }
 
+body.loading{
+  overflow: hidden;
+}
+
 $primary-color: #eaeaea;
 $second-color: #C6A179;
 $third-color: #faf3eb;
 
 $border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
 $border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+
+$maxwidth: 90rem;
+
+$breakpoint-one: 30em; // 480
+$breakpoint-two: 40em; //640px
+$breakpoint-three: 48em; //768
+$breakpoint-four: 62em; //992
 
 @mixin flexbox($align-items, $justify-content) {
   display: flex;
@@ -38,7 +49,11 @@ section:nth-child(1), #didYouKnow{
 }
 
 .heading {
-  font-size: 5.5rem;
+  width: 100%;
+  max-width: $maxwidth;
+  margin: 0 auto;
+  // font-size: 5.5rem; 2.2
+  font-size: clamp(2.3rem, 12vw, 5.5rem);
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 0.8px black;
@@ -54,7 +69,30 @@ section:nth-child(1), #didYouKnow{
     transform: translate(-50%, -50%);
     width: 100%;
     color: black;
-    font-size: 2rem;
+    font-size: clamp(1.1rem, 5vw, 2rem)
+  }
+}
+
+@media(max-width: $breakpoint-four){
+  section{
+    padding: 90px 70px 110px;
+  }
+}
+@media(max-width: $breakpoint-three){
+  section{
+    padding: 90px 50px 70px;
+  }
+}
+@media(max-width: $breakpoint-two){
+  section{
+    padding: 90px 20px 50px;
+  }
+}
+@media(max-width: $breakpoint-one) {
+  .heading span {
+    position: relative;
+    display: block;
+    top: -2px;
   }
 }
 
@@ -67,6 +105,7 @@ section:nth-child(1), #didYouKnow{
   text-transform: capitalize;
   color: $primary-color;
   transition: 0.6s;
+  font-size: clamp(0.8rem, 1.8vw, 1.2rem);
 
   &:hover {
     border-radius: $border-radius-hover;
@@ -84,11 +123,13 @@ section:nth-child(1), #didYouKnow{
   background-color: #c6a17971;
 }
 
+
+
 @import "header";
-@import "heroSection";
-@import "about";
-@import "didYouKnow";
-@import "menu";
-@import "review";
-@import "follow";
+@import "home/heroSection";
+@import "home/about";
+@import "home/didYouKnow";
+@import "home/menu";
+@import "home/review";
+@import "home/follow";
 @import "footer";

@@ -13,6 +13,42 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
+//for loading 
+const body = document.querySelector('body')
+const loader = document.querySelector(".loader")
+
+onload = () => {
+  loader.style.display = "none"
+  body.classList.remove('loading')
+}
+
+//for bars animation
+const bars = document.querySelector(".barIcon")
+const dropdown = document.querySelector(".dropdown-navbar")
+const dropdownLinks = document.querySelectorAll(".dropdown-navbar a")
+
+bars.onclick = () => {
+  bars.classList.toggle("xmark")
+  isOpen = bars.classList.contains("xmark")
+
+  if (isOpen) {
+    dropdown.classList.add("open")
+    gsap.from(dropdown, {
+      yPercent: -50,
+      opacity: 0,
+    })
+  } else {
+    dropdown.classList.remove("open")
+  }
+
+  window.onclick = (event) => {
+    if (!bars.contains(event.target)) {
+      bars.classList.remove("xmark")
+      dropdown.classList.remove("open")
+    }
+  }
+}
+
 //gsap
 
 //hero
@@ -56,14 +92,14 @@ aboutTl.from('#about .about-container .content', {
   ease: "none",
   yPercent: 50,
   opacity: 0,
-})
+}, 'about')
 
 aboutTl.from('#about .about-container .about-video', {
   duration: 0.5,
   ease: "none",
   yPercent: 50,
   opacity: 0
-})
+}, 'about')
 
 
 //dYK 
@@ -117,5 +153,7 @@ gsap.from('footer .box-container ', {
     // markers: true,
     scrub: false,
   },
+  ease: "none",
   yPercent: -120,
+  opacity: 0
 })

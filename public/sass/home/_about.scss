@@ -4,6 +4,9 @@
   transition: ease 0.6s;
 
   .about-container {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: 0 auto;
     margin-top: 20px;
     @include flexbox(center, space-between);
 
@@ -13,7 +16,7 @@
       .title {
         text-transform: capitalize;
         font-size: 1.9rem;
-        line-height: 2;
+        line-height: 1.5;
         color: black;
         font-family: "Montserrat", sans-serif;
       }
@@ -37,12 +40,13 @@
         @include flexbox(center, space-around);
         flex-direction: row;
         text-align: center;
-        margin: 30px 20px 10px;
+        margin: 30px 10px 0px 0px;
         padding: 10px 2px;
 
         .icons {
           color: $second-color;
           border: 3px solid $second-color;
+          margin: 10px;
 
           h3 {
             font-family: "Montserrat", sans-serif;
@@ -52,10 +56,60 @@
     }
 
     .about-video {
-      height: 400px;
+      height: clamp(250px, 25vw, 400px);
       padding: 20px;
       border-radius: 40px;
       border: 3px solid $second-color;
+    }
+  }
+
+  @media (max-width: $breakpoint-four) {
+    .about-container {
+      flex-direction: column-reverse;
+      text-align: center;
+
+      .about-video {
+        height: 300px;
+        margin: 10px 0px 40px;
+      }
+    }
+  }
+
+  @media(max-width: $breakpoint-two) {
+    .about-container {
+      .about-video {
+        height: 250px;
+      }
+    }
+  }
+
+  @media(max-width: $breakpoint-one) {
+    .about-container {
+      .content {
+        padding: 0;
+
+        .title {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+
+        .icons-container {
+          margin: 30px 0px 0px;
+          flex-wrap: wrap;
+
+          .icons img{
+            height: 40px ;
+          }
+        }
+      }
+
+      .about-video {
+        height: 180px;
+        padding: 10px;
+      }
     }
   }
 }

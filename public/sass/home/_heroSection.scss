@@ -14,48 +14,70 @@
     animation: bgChange 30s linear infinite;
     text-align: center;
     font-family: "Montserrat", sans-serif;
+    max-height: 1200px;
 
     @keyframes bgChange {
         0% {
             background-image: url("../assets/images/home-bg1.webp");
         }
+
         30% {
             background-image: url("../assets/images/home-bg1.webp");
         }
+
         35% {
             background-image: url("../assets/images/home-bg2.jpg");
         }
+
         65% {
             background-image: url("../assets/images/home-bg2.jpg");
         }
+
         70% {
             background-image: url("../assets/images/home-bg3.avif");
         }
+
         95% {
             background-image: url("../assets/images/home-bg3.avif");
         }
     }
 
     img {
-        height: 80px;
+        height: clamp(50px, 8vw, 80px);
     }
 
     h1 {
+        letter-spacing: -2px;
+        line-height: 1.2;
+        word-spacing: 5px;
         z-index: 5;
         color: white;
-        font-size: 6rem;
-        font-weight: 700; 
+        font-size: clamp(3.5rem, 8vw, 6.5rem);
+        font-weight: 700;
         padding: 20px 20px 0;
         text-transform: uppercase;
     }
 
     p {
         color: $second-color;
-        font-size: 1rem;
+        font-size: clamp(0.8rem, 1.5vw, 1rem);
         margin: 0px 20% 15px;
     }
 
-    .btn {
-        font-size: 1.2rem;
+    @media(max-width: $breakpoint-one){
+        img {
+            height: 40px;
+        }
+
+        h1{
+            padding: 20px 15px 0;
+            font-size: 3.2rem;
+        }
+
+        p{
+            margin: 10px 10%;
+            line-height: 1.4;
+            font-size: 0.7rem;
+        }
     }
 }
