@@ -1,4 +1,5 @@
 #review {
+  overflow: hidden;
   background-color: $third-color;
   position: relative;
   width: 100%;
@@ -71,7 +72,7 @@
         }
 
         p {
-          font-size: 1rem;
+          font-size: clamp(0.9rem, 2vw, 1.1rem);
           padding: 10px 20px;
           color: $second-color;
         }
@@ -93,5 +94,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: $breakpoint-two) {
+  #review .swiper .swiper-slide{
+      padding: 20px;
   }
 }

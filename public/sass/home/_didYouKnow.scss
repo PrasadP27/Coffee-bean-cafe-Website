@@ -30,7 +30,7 @@
             flex-direction: column;
             text-align: center;
             flex: 1 0 180px;
-            margin-top: 25px;
+            margin: 25px 15px 0;
 
             a {
                 text-decoration: none;
@@ -51,7 +51,27 @@
                     text-transform: uppercase;
                     font-family: "Montserrat", sans-serif;
                     line-height: 1.4;
+                    font-size: clamp(0.9rem, 3vw, 1.1rem);
                 }
+            }
+        }
+    }
+}
+
+@media(max-width: $breakpoint-four) {
+    #didYouKnow {
+        padding: 40px;
+    }
+}
+@media(max-width: $breakpoint-one) {
+    #didYouKnow {
+        padding: 30px;
+
+        .dYK-container{
+            padding-top: 20px;
+
+            .dYK-content a img {
+                height: 65px;
             }
         }
     }

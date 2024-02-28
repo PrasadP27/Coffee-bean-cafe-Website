@@ -37,7 +37,6 @@
         text-align: center;
         margin: 50px auto;
         width: 50%;
-        font-size: 1.2rem;
       }
     }
 
@@ -51,6 +50,36 @@
       img {
         height: 100%;
         width: 100%;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $breakpoint-four) {
+  #follow .follow-container {
+    display: block;
+
+    .follow-content {
+      width: 100%;
+    }
+
+    .follow-img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-two) {
+  #follow .follow-container {
+    .follow-content {
+      padding: 20px;
+      .insta {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        margin: 15px auto;
       }
     }
   }
