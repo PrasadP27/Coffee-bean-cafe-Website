@@ -49,7 +49,7 @@
 
       .review-content {
         h2 {
-          font-size: 2rem;
+          font-size: clamp(1.5rem, 4vw, 2rem);
           font-family: "Montserrat", sans-serif;
           padding: 10px;
           text-transform: capitalize;

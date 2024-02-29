@@ -34,8 +34,9 @@ bars.onclick = () => {
   if (isOpen) {
     dropdown.classList.add("open")
     gsap.from(dropdown, {
-      yPercent: -50,
+      // yPercent: -100,
       opacity: 0,
+      height: 0
     })
   } else {
     dropdown.classList.remove("open")
@@ -131,6 +132,19 @@ gsap.from("#menu .bg-img", {
   opacity: 0
 })
 
+gsap.from("#menu .menu-container .menu-content", {
+  scrollTrigger: {
+    trigger: "#menu",
+    start: '20% 70%',
+    end: '20% 70%',
+    scrub: false,
+    // markers: true,
+  },
+  ease: "none",
+  y: "50%",
+  opacity: 0,
+})
+
 //review
 
 gsap.from('#review .review-bg', {
@@ -149,7 +163,7 @@ gsap.from('footer .box-container ', {
   scrollTrigger: {
     trigger: 'footer',
     start: "50% 100%",
-    end: "50% 80%",
+    end: "50% 90%",
     // markers: true,
     scrub: false,
   },
