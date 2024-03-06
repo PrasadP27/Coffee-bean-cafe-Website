@@ -27,9 +27,8 @@ const menudata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'location', nav: 'loca
 
 router.get('/menu', (req, res) => {
     res.render('menu', {
-        menuItems,
-        reviewData,
-        navData: homeNavData
+        // menuItems,
+        // navData: homeNavData
     })
 })
 
