@@ -91,14 +91,14 @@ let aboutTl = gsap.timeline({
 aboutTl.from('#about .about-container .content', {
   duration: 0.5,
   ease: "none",
-  yPercent: 50,
+  yPercent: 70,
   opacity: 0,
 }, 'about')
 
 aboutTl.from('#about .about-container .about-video', {
   duration: 0.5,
   ease: "none",
-  yPercent: 50,
+  yPercent: 70,
   opacity: 0
 }, 'about')
 
@@ -141,7 +141,7 @@ gsap.from("#menu .menu-container .menu-content", {
     // markers: true,
   },
   ease: "none",
-  y: "50%",
+  y: "70%",
   opacity: 0,
 })
 
