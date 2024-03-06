@@ -23,5 +23,15 @@ router.all('*', (req, res) => {
     })
 })
 
+const menudata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'location', nav: 'location' }, { navLoc: 'booking', nav: 'Book table' }]
+
+router.get('/menu', (req, res) => {
+    res.render('menu', {
+        menuItems,
+        reviewData,
+        navData: homeNavData
+    })
+})
+
 
 module.exports = router
