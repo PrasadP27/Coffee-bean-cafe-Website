@@ -14,22 +14,24 @@ router.get('/', (req, res) => {
     })
 })
 
-const errordata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'menu', nav: 'menu' }, { navLoc: 'location', nav: 'location' }, { navLoc: 'booking', nav: 'Book table' }]
-
-router.all('*', (req, res) => {
-    res.status(404).render('404', {
-        is404: true,
-        navData: errordata
-    })
-})
 
 const menudata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'location', nav: 'location' }, { navLoc: 'booking', nav: 'Book table' }]
 
 router.get('/menu', (req, res) => {
     res.render('menu', {
         menuItems,
-        reviewData,
-        navData: homeNavData
+        navData: menudata
+    })
+})
+
+
+//for 404
+const errordata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'menu', nav: 'menu' }, { navLoc: 'location', nav: 'location' }, { navLoc: 'booking', nav: 'Book table' }]
+
+router.all('*', (req, res) => {
+    res.status(404).render('404', {
+        is404: true,
+        navData: errordata
     })
 })
 
