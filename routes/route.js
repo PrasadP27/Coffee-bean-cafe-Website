@@ -8,13 +8,13 @@ const homeNavData = [{ navLoc: '#home', nav: 'home' }, { navLoc: '#about', nav: 
 
 router.get('/', (req, res) => {
     res.render('home', {
-        menuItems: menuItems.slice(0, 6),
+        menuItems: menuItems.slice(0, 4),
         reviewData,
         navData: homeNavData
     })
 })
 
-
+//for menu
 const menudata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'location', nav: 'location' }, { navLoc: 'booking', nav: 'Book table' }]
 
 router.get('/menu', (req, res) => {
@@ -24,6 +24,14 @@ router.get('/menu', (req, res) => {
     })
 })
 
+//for location
+const locationdata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'menu', nav: 'menu' }, { navLoc: 'booking', nav: 'Book table' }]
+
+router.get('/location', (req, res) => {
+    res.render('location', {
+        navData: locationdata
+    })
+})
 
 //for 404
 const errordata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'menu', nav: 'menu' }, { navLoc: 'location', nav: 'location' }, { navLoc: 'booking', nav: 'Book table' }]
