@@ -56,3 +56,34 @@
         }
     }
 }
+
+.location-more {
+    // border: 1px solid #000;
+
+    .location-container {
+        border: 1px solid #000;
+        margin: 20px;
+        padding: 20px 0px;
+        @include flexbox(center, space-around);
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .location-content {
+            border: 1px solid #000;
+            // @include flexbox(null, null);
+            margin: 20px;
+
+            .loc-img{
+                // height: 500px;
+
+                img{
+                    width: 500px;
+                }
+            }
+
+            .loc-info {
+                border: 1px solid blue;
+            }
+        }
+    }
+}
