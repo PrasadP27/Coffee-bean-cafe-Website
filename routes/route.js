@@ -4,13 +4,15 @@ const reviewData = require('../data/reviewData')
 
 const router = express.Router()
 
+// for home
 const homeNavData = [{ navLoc: '#home', nav: 'home' }, { navLoc: '#about', nav: "about" }, { navLoc: '#menu', nav: 'menu' }, { navLoc: 'location', nav: 'location' }, { navLoc: 'booking', nav: 'Book table' }]
 
 router.get('/', (req, res) => {
     res.render('home', {
         menuItems: menuItems.slice(0, 4),
         reviewData,
-        navData: homeNavData
+        navData: homeNavData,
+        jsFile: "home"
     })
 })
 
@@ -20,7 +22,8 @@ const menudata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'location', nav: 'loca
 router.get('/menu', (req, res) => {
     res.render('menu', {
         menuItems,
-        navData: menudata
+        navData: menudata,
+        jsFile: "menu"
     })
 })
 
@@ -29,7 +32,8 @@ const locationdata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'menu', nav: 'menu
 
 router.get('/location', (req, res) => {
     res.render('location', {
-        navData: locationdata
+        navData: locationdata,
+        jsFile: "location"
     })
 })
 
@@ -39,7 +43,8 @@ const errordata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'menu', nav: 'menu' }
 router.all('*', (req, res) => {
     res.status(404).render('404', {
         is404: true,
-        navData: errordata
+        navData: errordata,
+        jsFile: "404"
     })
 })
 
