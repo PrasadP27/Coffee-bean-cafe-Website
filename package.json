@@ -7,7 +7,7 @@
     "watch": "sass -w ./public/sass/style.scss ./public/sass/css/style.css",
     "compile": "sass ./public/sass/style.scss ./public/sass/css/style.css",
     "dev": "nodemon index.js",
-    "start": "npm run compile && npm run "
+    "start": "npm run compile && npm run dev"
   },
   "author": "",
   "license": "ISC",
