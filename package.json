@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "sass -w ./public/sass/style.scss ./public/sass/css/style.css",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "npm run compile && npm run dev"
   },
   "author": "",
   "license": "ISC",
