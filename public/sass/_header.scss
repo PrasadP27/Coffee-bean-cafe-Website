@@ -154,6 +154,10 @@ header {
 
 
 @media(max-width: $breakpoint-one) {
+  header {
+    padding-top: 15px;
+  }
+
   header .logo img {
     width: 120px;
   }

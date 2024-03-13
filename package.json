@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "sass -w ./public/sass/style.scss ./public/sass/css/style.css",
-    "compile": "sass ./public/sass/style.scss ./public/sass/css/style.css",
-    "dev": "nodemon index.js",
-    "start": "npm run compile && npm run dev"
+    "watch": "sass -w ./public/sass/style.scss ./public/sass/style.css",
+    "compile": "sass ./public/sass/style.scss ./public/sass/style.css",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
