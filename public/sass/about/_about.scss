@@ -73,6 +73,12 @@
     }
 }
 
-.about-gallery{
+.about-gallery {
     background-color: $third-color;
+
+    .gallery-container {
+        img{
+            width: 350px;
+        }
+    }
 }
