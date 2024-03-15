@@ -29,7 +29,9 @@
 
     {{> header}}
 
-    {{{body}}}
+    <main>
+        {{{body}}}
+    </main>
 
     {{#unless is404}}
     {{> footer}}
@@ -42,7 +44,7 @@
         integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    
+
     <script src="js/{{jsFile}}.js"></script>
     <script src="js/script.js"></script>
 
