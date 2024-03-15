@@ -15,7 +15,7 @@ body {
   scroll-padding-top: 10px;
 }
 
-body.loading{
+body.loading {
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@ $border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
 $maxwidth: 90rem;
 
 $breakpoint-one: 30em; // 480
-$breakpoint-two: 40em; //640px
+$breakpoint-two: 40em; //640
 $breakpoint-three: 48em; //768
 $breakpoint-four: 62em; //992
 
@@ -44,7 +44,8 @@ section {
   padding: 100px 80px 130px;
 }
 
-section:nth-child(1), #didYouKnow{
+section:nth-child(1),
+#didYouKnow {
   padding: 0;
 }
 
@@ -52,7 +53,6 @@ section:nth-child(1), #didYouKnow{
   width: 100%;
   max-width: $maxwidth;
   margin: 0 auto;
-  // font-size: 5.5rem; 2.2
   font-size: clamp(2.3rem, 12vw, 5.5rem);
   text-transform: uppercase;
   color: transparent;
@@ -73,21 +73,24 @@ section:nth-child(1), #didYouKnow{
   }
 }
 
-@media(max-width: $breakpoint-four){
-  section{
+@media(max-width: $breakpoint-four) {
+  section {
     padding: 90px 70px 110px;
   }
 }
-@media(max-width: $breakpoint-three){
-  section{
+
+@media(max-width: $breakpoint-three) {
+  section {
     padding: 90px 50px 70px;
   }
 }
-@media(max-width: $breakpoint-two){
-  section{
+
+@media(max-width: $breakpoint-two) {
+  section {
     padding: 90px 20px 50px;
   }
 }
+
 @media(max-width: $breakpoint-one) {
   .heading span {
     position: relative;
@@ -113,7 +116,7 @@ section:nth-child(1), #didYouKnow{
     color: $second-color
   }
 
-  &:active{
+  &:active {
     scale: 0.8;
   }
 }
