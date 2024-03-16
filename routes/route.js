@@ -9,6 +9,7 @@ const homeNavData = [{ navLoc: '#home', nav: 'home' }, { navLoc: '#about', nav: 
 
 router.get('/', (req, res) => {
     res.render('home', {
+        page: "Home",
         menuItems: menuItems.slice(0, 4),
         reviewData,
         navData: homeNavData,
@@ -21,6 +22,7 @@ const aboutNavData = [{ navLoc: '/', nav: 'home' }, { navLoc: 'menu', nav: 'menu
 
 router.get('/about', (req, res) => {
     res.render('about', {
+        page: "About",
         navData: aboutNavData,
         jsFile: "about"
     })
@@ -31,9 +33,10 @@ const menuNavdata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'about', nav: "abou
 
 router.get('/menu', (req, res) => {
     res.render('menu', {
-        menuItems,
+        page: "Menu",
         navData: menuNavdata,
-        jsFile: "menu"
+        jsFile: "menu",
+        menuItems
     })
 })
 
@@ -42,8 +45,9 @@ const locationNavdata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'about', nav: "
 
 router.get('/location', (req, res) => {
     res.render('location', {
-        navData: locationNavdata,
-        jsFile: "location"
+        page: "Location",
+        jsFile: "location",
+        navData: locationNavdata
     })
 })
 
@@ -53,8 +57,9 @@ const errorNavdata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'about', nav: "abo
 router.all('*', (req, res) => {
     res.status(404).render('404', {
         is404: true,
-        navData: errorNavdata,
-        jsFile: "404"
+        page: "404",
+        jsFile: "404",
+        navData: errorNavdata
     })
 })
 

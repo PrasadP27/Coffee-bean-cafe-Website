@@ -1,60 +1,5 @@
 .about-home {
-    min-height: 500px;
-    overflow: hidden;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     background-image: url("/assets/images/home-bg3.avif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.538);
-    background-blend-mode: darken;
-    @include flexbox(center, center);
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    padding-top: 130px;
-    text-transform: uppercase;
-    text-align: center;
-
-    h1 {
-        letter-spacing: -2px;
-        word-spacing: 5px;
-        color: $primary-color;
-        font-size: clamp(3rem, 7vw, 6rem);
-        font-weight: 700;
-
-        @media (max-width: $breakpoint-one) {
-            & {
-                font-size: 2rem;
-            }
-        }
-    }
-
-    p {
-        color: $second-color;
-        font-size: clamp(1rem, 3vw, 1.2rem);
-        text-transform: capitalize
-    }
-
-    ul {
-        @include flexbox (center, center);
-        font-size: clamp(0.9rem, 3vw, 1.2rem);
-        font-weight: 700;
-
-        li {
-            color: $second-color;
-            list-style: none;
-
-            a {
-                color: $primary-color;
-                text-decoration: none;
-            }
-        }
-
-        img {
-            height: 20px;
-            margin: 20px;
-        }
-    }
 }
 
 .about-more {
@@ -68,6 +13,7 @@
         img {
             width: 50%;
             padding: 20px 50px 0px;
+            border-radius: $border-radius;
 
             @media (max-width: 900px) {
                 & {
@@ -106,7 +52,7 @@
         max-width: $maxwidth;
         margin: 0 auto;
 
-        .gallery{
+        .gallery {
             text-align: center;
             padding: 20px;
 
@@ -117,18 +63,20 @@
                 border-radius: $border-radius;
                 margin: 10px;
                 transition: 1s ease;
+                border: 3px solid #eaeaea;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-                &:hover{
+                &:hover {
                     border-radius: $border-radius-hover;
                     transform: scale(0.9);
                 }
             }
 
-            @media (max-width: 850px){
+            @media (max-width: 850px) {
                 & {
                     padding: 10px;
 
-                    img{
+                    img {
                         width: 250px;
                     }
                 }
@@ -149,7 +97,7 @@
     }
 }
 
-@media (max-width: $breakpoint-two){
+@media (max-width: $breakpoint-two) {
     .about-gallery .gallery-container .gallery {
         img:nth-child(n+5):nth-child(-n+10) {
             display: none;
@@ -166,7 +114,7 @@
         }
     }
 
-    .about-gallery .gallery-container .gallery img{
+    .about-gallery .gallery-container .gallery img {
         width: 100%;
     }
 }

@@ -1,64 +1,9 @@
 .menu-home {
-    min-height: 500px;
-    overflow: hidden;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     background-image: url("/assets/images/menuPage-bg.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: rgba(0, 0, 0, 0.347);
-    background-blend-mode: darken;
-    @include flexbox(center, center);
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    padding-top: 130px;
-    text-transform: uppercase;
-    text-align: center;
-
-    h1 {
-        letter-spacing: -2px;
-        word-spacing: 5px;
-        color: $primary-color;
-        font-size: clamp(3rem, 7vw, 6rem);
-        font-weight: 700;
-
-        @media (max-width: $breakpoint-one){
-            &{
-                font-size: 2rem;
-            }
-        }
-    }
-
-    p {
-        color: $second-color;
-        font-size: clamp(1rem, 3vw, 1.2rem);
-        text-transform: capitalize
-    }
-
-    ul {
-        @include flexbox (center, center);
-        font-size: clamp(0.9rem, 3vw, 1.2rem);
-        font-weight: 700;
-
-        li {
-            color: $second-color;
-            list-style: none;
-
-            a {
-                color: $primary-color;
-                text-decoration: none;
-            }
-        }
-
-        img {
-            height: 20px;
-            margin: 20px;
-        }
-    }
 }
 
 .menu-more {
-
     .menu-fullmenu {
         display: flex;
         justify-content: center;
@@ -120,5 +65,4 @@
             }
         }
     }
-
 }
