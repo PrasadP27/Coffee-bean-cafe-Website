@@ -4,11 +4,11 @@ A multi-page coffee website.
 
 This project is a simple multi-page website for a coffee house named Coffee Bean Cafe. User can see about cafe, locations of the cafe, menu of the cafe and book a table in their prefered location cafe.
 
-# Logo
 
-# Screenshot
+## Screenshot
+Screenshot of the landing page of the website 
+![Coffee bean cafe](https://github.com/PrasadP27/Coffee-bean-cafe-Website/assets/157368807/7e30dd20-a825-4b1f-936e-3753b40bf6f6)
 
-getting started 
 
 ## Features
 
@@ -53,6 +53,8 @@ npm run dev
 ```
 This will start the server and run on localhost:5000 port.
 
-
+<br>
+<br>
 [!NOTE]
+<br>
 Booking Page is under development. You will not be able to use the booking page.
