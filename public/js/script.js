@@ -57,7 +57,7 @@ gsap.from('footer .box-container ', {
   scrollTrigger: {
     trigger: 'footer',
     start: "50% 100%",
-    end: "50% 90%",
+    end: "50% 80%",
     // markers: true,
     scrub: false,
   },

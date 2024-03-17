@@ -3,6 +3,7 @@
 }
 
 .about-more {
+    overflow: hidden;
     .about-container {
         width: 100%;
         max-width: $maxwidth;
@@ -115,6 +116,6 @@
     }
 
     .about-gallery .gallery-container .gallery img {
-        width: 100%;
+        width: 90%;
     }
 }
