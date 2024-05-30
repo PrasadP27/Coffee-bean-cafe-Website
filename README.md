@@ -29,7 +29,7 @@ Screenshot of the landing page of the website
 ``SwiperJS``
 
 
-## Prerequist
+## Prerequisite
 
 For running the project locally you need Node.js installed on your machine.
 
