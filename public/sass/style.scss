@@ -129,7 +129,8 @@ section:nth-child(1),
 // for pages
 .about-home,
 .location-home,
-.menu-home {
+.menu-home,
+.booking-home {
   min-height: 500px;
   overflow: hidden;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
