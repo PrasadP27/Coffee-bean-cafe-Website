@@ -1,4 +1,36 @@
 .booking-home {
     background-image: url("/assets/images/booking-bg.webp");
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.booking-more {
+    .booking-container {
+        @include flexbox(center, space-around);
+        border: 1px solid #000;
+        padding: 30px;
+        margin-top: 50px;
+
+        .booking-img {
+            // height: 500px;
+            width: 35%;
+            border: 1px solid #000;
+            @include flexbox(center, space-around);
+            flex-direction: row;
+
+            img{
+                min-height: 500px;
+                width: 45%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+
+        .booking-form {
+            height: 100%;
+            width: 50%;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            // text-align: center;
+        }
+    }
 }
