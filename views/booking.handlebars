@@ -25,29 +25,36 @@
                 <div class="input-box">
                     <div class="input-field field">
                         <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
-                        <div class="error-txt">*Full Name can't be blank</div>
+                        {{!-- <div class="error-txt">*Full Name can't be blank</div> --}}
                     </div>
                     <div class="input-field field">
                         <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
-                        <div class="error-txt email">*Email Adderss can't be blank</div>
+                        {{!-- <div class="error-txt email">*Email Adderss can't be blank</div> --}}
                     </div>
                 </div>
+
 
                 <div class="input-box">
                     <div class="input-field field">
                         <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
-                        <div class="error-txt number">*Phone number can't be blank</div>
+                        {{!-- <div class="error-txt number">*Phone number can't be blank</div> --}}
                     </div>
+                
                     <div class="input-field field">
-                        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
-                        <div class="error-txt">*Subject can't be blank</div>
+                        <select name="location" id="" class="item" data-placeholder=""="Select a location">
+                            <option value="">none</option>
+                            <option value="">Bandra</option>
+                            <option value="">Thane</option>
+                            <option value="">Vashi</option>
+                        </select>
+                        {{!-- <div class="error-txt place">*Location cannot be none</div> --}}
                     </div>
                 </div>
 
                 <div class="textarea-field field">
                     <textarea name="" id="message" cols="30" rows="5" placeholder="Your Message" class="item"
                         autocomplete="off"></textarea>
-                    <div class="error-txt">*Message can't be blank</div>
+                    {{!-- <div class="error-txt">*Message can't be blank</div> --}}
                 </div>
 
                 <button type="submit">Book a Table</button>
