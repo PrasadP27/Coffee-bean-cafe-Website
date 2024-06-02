@@ -4,15 +4,6 @@ window.addEventListener("scroll", function () {
   navbar.classList.toggle("sticky", window.scrollY > 0);
 });
 
-//for swiper
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 80,
-  autoplay: {
-    delay: 3500,
-  }
-});
-
 //for loading 
 const body = document.querySelector('body')
 const loader = document.querySelector(".loader")
