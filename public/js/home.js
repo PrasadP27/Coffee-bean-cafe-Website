@@ -1,3 +1,12 @@
+//for swiper
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 80,
+  autoplay: {
+    delay: 3500,
+  }
+});
+
 //hero
 let homeTo = ["#home img ", "#home h1", "#home p", "#home .btn"];
 let homeFrom = ["#home img ", "#home h1", "#home p", "#home .btn"];

@@ -10,9 +10,11 @@ const homeNavData = [{ navLoc: '#home', nav: 'home' }, { navLoc: '#about', nav: 
 router.get('/', (req, res) => {
     res.render('home', {
         page: "Home",
+        externalCss: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css',
         menuItems: menuItems.slice(0, 4),
         reviewData,
         navData: homeNavData,
+        externalJs: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js',
         jsFile: "home"
     })
 })
@@ -57,6 +59,8 @@ const bookingNavdata = [{ navLoc: '/', nav: 'Home' }, { navLoc: 'about', nav: "a
 router.get('/booking', (req, res) => {
     res.render('booking', {
         page: "Booking",
+        externalCss: 'https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css',
+        externalJs: 'https://cdn.jsdelivr.net/npm/flatpickr',
         jsFile: "booking",
         navData: bookingNavdata
     })

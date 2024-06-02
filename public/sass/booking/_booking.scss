@@ -6,17 +6,17 @@
 .booking-more {
     background-color: #faf3eb;
 
-    .booking-container{
+    .booking-container {
         @include flexbox(flex-start, center);
         margin-top: 50px;
         border: 1px solid #000;
 
-        .booking-img{
+        .booking-img {
             width: 35%;
             @include flexbox(center, space-around);
             flex-direction: row;
 
-            img{
+            img {
                 width: 45%;
                 min-height: 500px;
                 object-fit: cover;
@@ -24,7 +24,7 @@
             }
         }
 
-        .booking-form{
+        .booking-form {
             width: 50%;
             min-height: 500px;
             margin-left: 30px;
@@ -32,48 +32,45 @@
             form {
                 text-align: center;
 
-                .input-box{
+                .input-box {
                     position: relative;
                     @include flexbox(null, space-around);
                     flex: 1;
                     gap: 20px;
 
-                    .input-field{
+                    .input-field {
                         width: 50%;
                     }
                 }
 
                 .field {
-                    // @include flexbox(center, center)
-
+                    @include flexbox(flex-start, center);
+                    flex-direction: column;
+                    
                     .item {
                         outline: none;
                         padding: 15px;
                         width: 100%;
                         border-radius: 10px;
-                        margin-bottom: 25px;
+                        // margin-bottom: 25px;
                         border: 2px solid #fff;
                         transition: 0.6s;
 
-                        &:hover{
+                        &:hover {
                             border: 2px solid $primary-color;
                         }
 
-                        &:active{
-                            border: 2px solid $second-color;
-                        }
-
-                        &:focus{
-                            border: 2ps solid $second-color;
-                        }
+                        // &:focus{
+                        //     border: 2ps solid $second-color;
+                        // }
                     }
-                    
-                    textarea{
+
+                    textarea {
                         resize: none;
                     }
                 }
 
-                button{
+                button {
                     padding: 10px;
                     border: 2px solid $primary-color;
                     border-radius: 10px;
