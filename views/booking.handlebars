@@ -56,15 +56,15 @@
 
                 <div class="input-box">
                     <div class="input-field field">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" placeholder="9876543210" id="phone" class="item" autocomplete="off">
-                        <div class="error-txt number">*Phone number can't be blank</div>
+                        <label for="phone">Date of registration</label>
+                        <input type="text" placeholder="eg: June 1, 2024" id="date" class="item" autocomplete="off">
+                        <div class="error-txt number">*Date can't be blank</div>
                     </div>
 
                     <div class="input-field field">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" placeholder="9876543210" id="phone" class="item" autocomplete="off">
-                        <div class="error-txt number">*Phone number can't be blank</div>
+                        <label for="phone">Choose time for registration</label>
+                        <input type="text" placeholder="eg: 11 : 30 AM" id="time" class="item">
+                        <div class="error-txt number">*Time can't be blank</div>
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@
                     <label for="message">Any message for us</label>
                     <textarea name="" id="message" cols="20" rows="5" placeholder="Your Message" class="item"
                         autocomplete="off"></textarea>
-                    <div class="error-txt">*Message can't be blank</div>
+                    {{!-- <div class="error-txt">*Message can't be blank</div> --}}
                 </div>
 
                 <button type="submit">Book a Table</button>
