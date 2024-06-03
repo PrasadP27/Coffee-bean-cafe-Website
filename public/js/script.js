@@ -9,8 +9,11 @@ const body = document.querySelector('body')
 const loader = document.querySelector(".loader")
 
 onload = () => {
-  loader.style.display = "none"
   body.classList.remove('loading')
+
+  setTimeout(() => {
+    loader.style.display = 'none'
+  }, 200)
 }
 
 //for bars animation
