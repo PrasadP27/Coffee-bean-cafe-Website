@@ -46,7 +46,6 @@ function checkInputs() {
         if (items[1].value != "") {
             checkEmail()
         }
-
         //if any key is pressed in email check email format
         items[1].addEventListener("keyup", () => {
             checkEmail()
@@ -56,11 +55,37 @@ function checkInputs() {
         if (items[2].value != "") {
             checkPhone()
         }
-
         //if any key is pressed in email check email format
         items[2].addEventListener("keyup", () => {
             checkPhone()
         })
+
+        //if lcoation is not blank
+        if (items[3].value != "") {
+            checkLocation()
+        }
+        //if mouse click is pressed in location then check
+        items[3].addEventListener("mouseup", () => {
+            checkLocation()
+        })
+
+        // //if lcoation is not blank
+        // if (items[4].value != "") {
+        //     checkDate()
+        // }
+        // //if mouse click is pressed in location then check
+        // items[4].addEventListener("click", () => {
+        //     checkDate()
+        // });
+
+        // //if lcoation is not blank
+        // if (items[5].value != "") {
+        //     checkTime()
+        // }
+        // //if mouse click is pressed in location then check
+        // items[5].addEventListener("click", () => {
+        //     checkTime()
+        // })
 
 
         item.addEventListener("keyup", () => {
@@ -131,6 +156,39 @@ function checkPhone() {
     }
 }
 
+function checkLocation() {
+    if (loca.value != "") {
+        loca.classList.remove("error")
+        loca.parentElement.classList.remove("error")
+    } else {
+        loca.classList.add("error")
+        loca.parentElement.classList.add("error")
+    }
+}
+
+// function checkDate() {
+//     console.log(date.value);
+
+//     if (date.value != "") {
+//         date.classList.remove("error")
+//         date.parentElement.classList.remove("error")
+//     } else {
+//         date.classList.add("error")
+//         date.parentElement.classList.add("error")
+//     }
+// }
+
+// function checkTime() {
+//     console.log(time.value);
+
+//     if (time.value != "") {
+//         time.classList.remove("error")
+//         time.parentElement.classList.remove("error")
+//     } else {
+//         time.classList.add("error")
+//         time.parentElement.classList.add("error")
+//     }
+// }
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
