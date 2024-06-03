@@ -109,7 +109,7 @@ function checkPhone() {
     const errorTxtPhone = document.querySelector('.error-txt.number')
 
     if (!phone.value.match(phoneregex)) {
-        // phone.classList.add("error")
+        phone.classList.add("error")
         phone.parentElement.classList.add("error")
 
         if (phone.value != "") {
@@ -126,7 +126,7 @@ function checkPhone() {
         }
 
     } else {
-        // phone.classList.remove("error")
+        phone.classList.remove("error")
         phone.parentElement.classList.remove("error")
     }
 }
