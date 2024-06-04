@@ -21,6 +21,7 @@ body {
 
 body.loading {
   overflow: hidden;
+  pointer-events: none;
 }
 
 $primary-color: #eaeaea;
