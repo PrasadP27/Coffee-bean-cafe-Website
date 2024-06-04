@@ -11,7 +11,12 @@ flatpickr("#date", {
     altInput: true,
     altFormat: "F j, Y",
     minDate: "today",
-    maxDate: new Date().fp_incr(7)
+    maxDate: new Date().fp_incr(7),
+    //for date validation
+    onChange: function (selectedDates, dateStr, instance) {
+        date.classList.remove("error");
+        date.parentElement.classList.remove("error");
+    }
 })
 
 flatpickr("#time", {
@@ -19,7 +24,12 @@ flatpickr("#time", {
     noCalendar: true,
     dateFormat: "h : i  K",
     minTime: "10:00",
-    maxTime: "23:00"
+    maxTime: "23:00",
+    // for time validation
+    onChange: function (selectedDates, dateStr, instance) {
+        time.classList.remove("error");
+        time.parentElement.classList.remove("error");
+    }
 })
 
 //form validation 
@@ -68,25 +78,10 @@ function checkInputs() {
         items[3].addEventListener("mouseup", () => {
             checkLocation()
         })
-
-        // //if lcoation is not blank
-        // if (items[4].value != "") {
-        //     checkDate()
-        // }
-        // //if mouse click is pressed in location then check
-        // items[4].addEventListener("click", () => {
-        //     checkDate()
-        // });
-
-        // //if lcoation is not blank
-        // if (items[5].value != "") {
-        //     checkTime()
-        // }
-        // //if mouse click is pressed in location then check
-        // items[5].addEventListener("click", () => {
-        //     checkTime()
-        // })
-
+        //if touch click is pressed in location then check
+        items[3].addEventListener("touchstart", () => {
+            checkLocation()
+        })
 
         item.addEventListener("keyup", () => {
             if (item.value != "") {
@@ -165,30 +160,6 @@ function checkLocation() {
         loca.parentElement.classList.add("error")
     }
 }
-
-// function checkDate() {
-//     console.log(date.value);
-
-//     if (date.value != "") {
-//         date.classList.remove("error")
-//         date.parentElement.classList.remove("error")
-//     } else {
-//         date.classList.add("error")
-//         date.parentElement.classList.add("error")
-//     }
-// }
-
-// function checkTime() {
-//     console.log(time.value);
-
-//     if (time.value != "") {
-//         time.classList.remove("error")
-//         time.parentElement.classList.remove("error")
-//     } else {
-//         time.classList.add("error")
-//         time.parentElement.classList.add("error")
-//     }
-// }
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
