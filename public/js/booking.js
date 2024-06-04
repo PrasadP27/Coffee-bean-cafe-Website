@@ -5,6 +5,36 @@ gsap.from('.booking-home h1, .booking-home p , .booking-home nav', {
     duration: 1.5,
 });
 
+gsap.from('.booking-more .booking-container .booking-img', {
+    scrollTrigger: {
+        trigger: ".booking-more",
+        start: '20% 70%',
+        end: '20% 70%',
+        scrub: false,
+        // markers: true,
+    },
+    xPercent: -80,
+    stagger: 0.5,
+    ease: "back.out(1.7)",
+    duration: 1,
+    opacity: 0
+})
+
+gsap.from('.booking-more .booking-container .booking-form', {
+    scrollTrigger: {
+        trigger: ".booking-more",
+        start: '20% 70%',
+        end: '20% 70%',
+        scrub: false,
+        // markers: true,
+    },
+    xPercent: 80,
+    stagger: 0.5,
+    ease: "back.out(1)",
+    duration: 1,
+    opacity: 0
+})
+
 //flatpicker
 
 flatpickr("#date", {
