@@ -72,62 +72,7 @@ const loca = document.getElementById('location')
 const date = document.getElementById('date')
 const time = document.getElementById('time')
 const mess = document.getElementById('message')
-
-function checkInputs() {
-    const items = document.querySelectorAll(".item")
-
-    for (const item of items) {
-        if (item.value == "") {
-            item.classList.add("error")
-            item.parentElement.classList.add("error")
-        }
-
-        //if email is not blank check the email format
-        if (items[1].value != "") {
-            checkEmail()
-        }
-        //if any key is pressed in email check email format
-        items[1].addEventListener("keyup", () => {
-            checkEmail()
-        })
-
-        //if phone is not blank then check if its number
-        if (items[2].value != "") {
-            checkPhone()
-        }
-        //if any key is pressed in email check email format
-        items[2].addEventListener("keyup", () => {
-            checkPhone()
-        })
-
-        //if lcoation is not blank
-        if (items[3].value != "") {
-            checkLocation()
-        }
-        //if mouse click is pressed in location then check
-        items[3].addEventListener("mouseup", () => {
-            checkLocation()
-        })
-        //if touch click is pressed in location then check
-        items[3].addEventListener("touchstart", () => {
-            checkLocation()
-        })
-
-        item.addEventListener("keyup", () => {
-            if (item.value != "") {
-                item.classList.remove("error")
-                item.parentElement.classList.remove("error")
-            }
-            else {
-                item.classList.add("error")
-                item.parentElement.classList.add("error")
-            }
-        })
-    }
-
-    mess.classList.remove("error")
-    mess.parentElement.classList.remove("error")
-}
+const popupEl = document.querySelector(".popup")
 
 //check if the email is valid format
 function checkEmail() {
@@ -191,9 +136,64 @@ function checkLocation() {
     }
 }
 
-function confirmationPage() {
+function checkInputs() {
+    const items = document.querySelectorAll(".item")
 
-    const popupEl = document.querySelector(".popup")
+    for (const item of items) {
+        if (item.value == "") {
+            item.classList.add("error")
+            item.parentElement.classList.add("error")
+        }
+
+        //if email is not blank check the email format
+        if (items[1].value != "") {
+            checkEmail()
+        }
+        //if any key is pressed in email check email format
+        items[1].addEventListener("keyup", () => {
+            checkEmail()
+        })
+
+        //if phone is not blank then check if its number
+        if (items[2].value != "") {
+            checkPhone()
+        }
+        //if any key is pressed in email check email format
+        items[2].addEventListener("keyup", () => {
+            checkPhone()
+        })
+
+        //if lcoation is not blank
+        if (items[3].value != "") {
+            checkLocation()
+        }
+        //if mouse click is pressed in location then check
+        items[3].addEventListener("mouseup", () => {
+            checkLocation()
+        })
+        //if touch click is pressed in location then check
+        items[3].addEventListener("touchstart", () => {
+            checkLocation()
+        })
+
+        item.addEventListener("keyup", () => {
+            if (item.value != "") {
+                item.classList.remove("error")
+                item.parentElement.classList.remove("error")
+            }
+            else {
+                item.classList.add("error")
+                item.parentElement.classList.add("error")
+            }
+        })
+    }
+
+    mess.classList.remove("error")
+    mess.parentElement.classList.remove("error")
+}
+
+
+function confirmationPage() {
 
     popupEl.style.display = "flex"
 
@@ -232,9 +232,9 @@ function confirmationPage() {
             <p class="item-value">${mess.value}</p>
         </div>
     </div>
-    <button type="submit" class="btn">Confirm</button>
+    <button type="submit" class="btn done">Confirm</button>
+    <button type="submit" class="btn deny">Need some changes</button>
     `
-
 }
 
 form.addEventListener("submit", (e) => {
@@ -246,7 +246,20 @@ form.addEventListener("submit", (e) => {
 
         confirmationPage()
 
-        form.reset()
-        return false
+        // if confirm btn clicked then only clear the form else return to the form
+        const confirmBtn = document.querySelector(".done")
+
+        confirmBtn.onclick = () => {
+            popupEl.style.display = "none"
+            console.log(fullName.value, email.value, phone.value, loca.value, date.value, time.value, mess.value);
+            form.reset()
+            return false
+        }
+
+        const denyBtn = document.querySelector(".deny")
+        denyBtn.onclick = () => {
+            popupEl.style.display = "none"
+            return false
+        }
     }
 })
