@@ -191,16 +191,60 @@ function checkLocation() {
     }
 }
 
+function confirmationPage() {
+
+    const popupEl = document.querySelector(".popup")
+
+    popupEl.style.display = "flex"
+
+    const confirmationEl = document.querySelector(".confirmation")
+
+    confirmationEl.innerHTML = `
+    <h1>confirmation page</h1>
+    <p>Our team will contact you to confirm your registration.</p>
+    <div class="confirm-container">
+        <div class="confirm-items">
+            <p class="item-label">Name:</p>
+            <p class="item-value">${fullName.value}</p>
+        </div>
+        <div class="confirm-items">
+            <p class="item-label">Email:</p>
+            <p class="item-value">${email.value}</p>
+        </div>
+        <div class="confirm-items">
+            <p class="item-label">phone number:</p>
+            <p class="item-value">${phone.value}</p>
+        </div>
+        <div class="confirm-items">
+            <p class="item-label">location of cafe:</p>
+            <p class="item-value">${loca.value}</p>
+        </div>
+        <div class="confirm-items">
+            <p class="item-label">date of registration:</p>
+            <p class="item-value">${date.value}</p>
+        </div>
+        <div class="confirm-items">
+            <p class="item-label">Time for registration:</p>
+            <p class="item-value">${time.value}</p>
+        </div>
+        <div class="confirm-items">
+            <p class="item-label">Any additional message:</p>
+            <p class="item-value">${mess.value}</p>
+        </div>
+    </div>
+    <button type="submit" class="btn">Confirm</button>
+    `
+
+}
+
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
     checkInputs()
 
-    if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !loca.classList.contains("error") && !date.classList.contains("error") && !time.classList.contains("error") && !mess.classList.contains("error")) {
+    if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !loca.classList.contains("error") && !date.classList.contains("error") && !time.classList.contains("error")) {
 
-        console.log("Message send");
-
-        // sendEmail()
+        confirmationPage()
 
         form.reset()
         return false

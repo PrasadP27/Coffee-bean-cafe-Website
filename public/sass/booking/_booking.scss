@@ -1,3 +1,89 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 150;
+    overflow-y: scroll;
+    backdrop-filter: blur(10px);
+    background-color: #0000002a;
+    @include flexbox(center, center);
+    display: none;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .popup-container {
+        width: 70%;
+        max-width: 80rem;
+        border: 3px solid #000;
+        background-color: $primary-color;
+        text-align: center;
+        border-radius: $border-radius;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 20px 50px;
+
+        h1 {
+            text-transform: capitalize;
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            word-spacing: 5px;
+            line-height: 1.5;
+            color: black;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .confirm-container {
+            // border: 1px solid #000;
+            margin-top: 20px;
+            @include flexbox (center, center);
+            flex-wrap: wrap;
+            padding: 10px;
+
+            .confirm-items {
+                // border: 1px solid #000;
+                text-align: left;
+                flex: 1 1 300px;
+                padding: 15px;
+
+                .item-label {
+                    margin: 3px;
+                    color: #707070;
+                    // text-align: left;
+                    font-weight: 600;
+                    font-size: clamp(15px, 1.5vw, 20px);
+                    text-transform: capitalize;
+                }
+
+                .item-value {
+                    font-size: clamp(14px, 1.4vw, 18px);
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        button {
+            padding: 15px 30px;
+            margin: 15px;
+            color: #707070;
+            border: 2px solid #707070;
+            font-weight: 500;
+            font-size: clamp(0.7rem, 1.5vw, 1rem);
+
+            &:hover {
+                border: 2px dashed $second-color;
+                color: $second-color;
+            }
+        }
+    }
+}
+
 .booking-home {
     background-image: url("/assets/images/booking-bg.webp");
     background-color: rgba(0, 0, 0, 0.6);
@@ -50,14 +136,15 @@
                     flex-direction: column;
                     margin-bottom: 12px;
 
-                    label{
+                    label {
                         margin: 3px;
                         color: #707070;
                         text-align: left;
-                        font-weight: 600;
+                        font-weight: 700;
                         font-size: clamp(12px, 1vw, 17px);
+                        font-family: "Montserrat", sans-serif
                     }
-                    
+
                     .item {
                         outline: none;
                         padding: 15px;
@@ -70,17 +157,17 @@
                             border: 2px solid $primary-color;
                         }
 
-                        &:focus{
+                        &:focus {
                             border: 2px solid $second-color;
                         }
 
-                        &::placeholder{
+                        &::placeholder {
                             color: #adadad;
                         }
                     }
 
-                    .error-txt{
-                        visibility: hidden;  
+                    .error-txt {
+                        visibility: hidden;
                         margin: 3px;
                         color: #d93025;
                         text-align: left;
@@ -88,11 +175,11 @@
                         font-size: clamp(10px, 1vw, 15px);
                     }
 
-                    &.error .item{
+                    &.error .item {
                         border-color: #d93025;
                     }
 
-                    &.error .error-txt{
+                    &.error .error-txt {
                         visibility: visible;
                     }
 
@@ -108,8 +195,8 @@
                     border: 2px solid #707070;
                     font-weight: 500;
                     font-size: clamp(0.7rem, 1.5vw, 1rem);
-                    
-                    &:hover{
+
+                    &:hover {
                         border: 2px dashed $second-color;
                         color: $second-color;
                     }
@@ -120,34 +207,34 @@
 }
 
 @media(max-width: $breakpoint-four) {
-    .booking-more{
-        .booking-container{
+    .booking-more {
+        .booking-container {
             gap: 40px;
         }
     }
 }
 
 @media(max-width: $breakpoint-three) {
-    .booking-more{
-        .booking-container{
+    .booking-more {
+        .booking-container {
             gap: 20px;
         }
     }
 }
 
 @media(max-width: $breakpoint-two) {
-    .booking-more{
-        .booking-container{
+    .booking-more {
+        .booking-container {
             gap: 0px;
             align-items: center;
             flex-direction: column-reverse;
 
-            .booking-img{
+            .booking-img {
                 margin-top: 30px;
                 width: 90%;
             }
 
-            .booking-form{
+            .booking-form {
                 width: 90%;
             }
         }
@@ -155,29 +242,29 @@
 }
 
 @media(max-width: $breakpoint-one) {
-    .booking-more{
-        .booking-container{
+    .booking-more {
+        .booking-container {
             margin-top: 20px;
 
-            .booking-img{
+            .booking-img {
                 margin-top: 40px;
                 width: 100%;
             }
 
-            .booking-form{
+            .booking-form {
                 width: 100%;
 
-                form{
-                    .input-box{
+                form {
+                    .input-box {
                         flex-direction: column;
                         gap: 0;
 
-                        .input-field{
+                        .input-field {
                             width: 100%;
                         }
                     }
 
-                    .field{
+                    .field {
                         margin-bottom: 8px;
                     }
 
