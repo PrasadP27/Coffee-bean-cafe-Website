@@ -175,8 +175,24 @@
                         font-size: clamp(10px, 1vw, 15px);
                     }
 
+                    @keyframes shake {
+                        0% {
+                            transform: translateX(0px);
+                        }
+                        40% {
+                            transform: translateX(-8px);
+                        }
+                        70% {
+                            transform: translateX(8px);
+                        }
+                        100% {
+                            transform: translateX(0);
+                        }
+                    }
+
                     &.error .item {
                         border-color: #d93025;
+                        animation: shake 0.4s linear;
                     }
 
                     &.error .error-txt {

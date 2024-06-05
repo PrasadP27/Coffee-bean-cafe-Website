@@ -73,6 +73,7 @@ const date = document.getElementById('date')
 const time = document.getElementById('time')
 const mess = document.getElementById('message')
 const popupEl = document.querySelector(".popup")
+const popupContainerEl = document.querySelector(".popup-container")
 
 //check if the email is valid format
 function checkEmail() {
@@ -197,9 +198,14 @@ function confirmationPage() {
 
     popupEl.style.display = "flex"
 
-    const confirmationEl = document.querySelector(".confirmation")
+    gsap.to(popupContainerEl, {
+        scale: 1,
+        ease: "back.out(1.7)",
+        opacity: 1,
+        duration: 0.8
+    })
 
-    confirmationEl.innerHTML = `
+    popupContainerEl.innerHTML = `
     <h1>confirmation page</h1>
     <p>Our team will contact you to confirm your registration.</p>
     <div class="confirm-container">
@@ -232,8 +238,8 @@ function confirmationPage() {
             <p class="item-value">${mess.value}</p>
         </div>
     </div>
-    <button type="submit" class="btn done">Confirm</button>
     <button type="submit" class="btn deny">Need some changes</button>
+    <button type="submit" class="btn done">Confirm</button>
     `
 }
 
@@ -250,15 +256,36 @@ form.addEventListener("submit", (e) => {
         const confirmBtn = document.querySelector(".done")
 
         confirmBtn.onclick = () => {
-            popupEl.style.display = "none"
-            console.log(fullName.value, email.value, phone.value, loca.value, date.value, time.value, mess.value);
+
+            gsap.to(popupContainerEl, {
+                scale: 0,
+                opacity: 0,
+                duration: 0.8
+            })
+
+            setTimeout(() => {
+                popupEl.style.display = "none"
+            }, 600)
+
+            // console.log(fullName.value, email.value, phone.value, loca.value, date.value, time.value, mess.value);
+
             form.reset()
             return false
         }
 
         const denyBtn = document.querySelector(".deny")
         denyBtn.onclick = () => {
-            popupEl.style.display = "none"
+
+            gsap.to(popupContainerEl, {
+                scale: 0,
+                opacity: 0,
+                duration: 0.5
+            })
+
+            setTimeout(() => {
+                popupEl.style.display = "none"
+            }, 500)
+
             return false
         }
     }
