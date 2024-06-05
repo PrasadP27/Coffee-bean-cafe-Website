@@ -26,17 +26,23 @@
         border-radius: $border-radius;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         padding: 20px 50px;
+        scale: 0;
+        opacity: 0;
 
         h1 {
+            font-size: clamp(1.5rem, 4.5vw, 3rem);
             text-transform: capitalize;
-            font-size: 3rem;
             font-weight: 700;
-            text-transform: uppercase;
             letter-spacing: -2px;
             word-spacing: 5px;
             line-height: 1.5;
             color: black;
             font-family: "Montserrat", sans-serif;
+        }
+
+        p{
+            color:$second-color;
+            font-size: clamp(0.7rem, 2vw, 1rem);
         }
 
         .confirm-container {
@@ -57,13 +63,15 @@
                     color: #707070;
                     // text-align: left;
                     font-weight: 600;
-                    font-size: clamp(15px, 1.5vw, 20px);
+                    font-size: clamp(13px, 1.5vw, 20px);
                     text-transform: capitalize;
                 }
 
                 .item-value {
                     font-size: clamp(14px, 1.4vw, 18px);
                     margin-left: 8px;
+                    color: #c0925f;
+                    font-weight: 500;
                 }
             }
         }
@@ -80,6 +88,11 @@
                 border: 2px dashed $second-color;
                 color: $second-color;
             }
+        }
+
+        .deny {
+            border-color: red;
+            color: red;
         }
     }
 }
@@ -223,6 +236,10 @@
 }
 
 @media(max-width: $breakpoint-four) {
+    .popup .popup-container{
+        padding: 20px 40px;
+    }
+
     .booking-more {
         .booking-container {
             gap: 40px;
@@ -231,6 +248,11 @@
 }
 
 @media(max-width: $breakpoint-three) {
+    .popup .popup-container{
+        padding: 20px 30px;
+        width: 80%;
+    }
+
     .booking-more {
         .booking-container {
             gap: 20px;
@@ -239,6 +261,19 @@
 }
 
 @media(max-width: $breakpoint-two) {
+    .popup .popup-container{
+        width: 85%;
+        padding: 20px;
+
+        .confirm-items{
+            padding: 10px;
+        }
+
+        button{
+            width: 80%;
+        }
+    }
+
     .booking-more {
         .booking-container {
             gap: 0px;
@@ -258,6 +293,19 @@
 }
 
 @media(max-width: $breakpoint-one) {
+    .popup .popup-container{
+        width: 90%;
+        padding: 15px;
+
+        .confirm-container{
+            margin-top: 10px;
+        }
+
+        button{
+            width: 80%;
+        }
+    }
+
     .booking-more {
         .booking-container {
             margin-top: 20px;

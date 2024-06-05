@@ -248,7 +248,8 @@ form.addEventListener("submit", (e) => {
 
     checkInputs()
 
-    if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !loca.classList.contains("error") && !date.classList.contains("error") && !time.classList.contains("error")) {
+    if (!fullName.classList.contains("error")) {
+    // if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !loca.classList.contains("error") && !date.classList.contains("error") && !time.classList.contains("error")) {
 
         confirmationPage()
 
