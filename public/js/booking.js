@@ -243,13 +243,42 @@ function confirmationPage() {
     `
 }
 
+function successPage() {
+    popupContainerEl.innerHTML = `
+    <img src="assets/icons/Submitted_successfully.svg" alt="success-img">
+        <div class="success-container">
+            <h1>Success</h1>
+            <h2>Your table reservation request has been successfully Submitted.</h2>
+            <p>Our team will contact you to confirm your reservation.</p>
+            <p>Thank You for choosing us.</p>
+
+            <a href="/"><button class="btn">Return to home</button></a>
+            <button class="btn okayBtn">okay</button>
+        </div>`
+
+    const okayBtnEl = document.querySelector(".okayBtn")
+
+    okayBtnEl.onclick = () => {
+
+        gsap.to(popupContainerEl, {
+            scale: 0,
+            opacity: 0,
+            duration: 0.5
+        })
+
+        setTimeout(() => {
+            popupEl.style.display = "none"
+        }, 500)
+
+    }
+}
+
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
     checkInputs()
 
-    if (!fullName.classList.contains("error")) {
-    // if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !loca.classList.contains("error") && !date.classList.contains("error") && !time.classList.contains("error")) {
+    if (!fullName.classList.contains("error") && !email.classList.contains("error") && !phone.classList.contains("error") && !loca.classList.contains("error") && !date.classList.contains("error") && !time.classList.contains("error")) {
 
         confirmationPage()
 
@@ -258,15 +287,9 @@ form.addEventListener("submit", (e) => {
 
         confirmBtn.onclick = () => {
 
-            gsap.to(popupContainerEl, {
-                scale: 0,
-                opacity: 0,
-                duration: 0.8
-            })
+            console.log("Message Submited");
 
-            setTimeout(() => {
-                popupEl.style.display = "none"
-            }, 600)
+            successPage()
 
             // console.log(fullName.value, email.value, phone.value, loca.value, date.value, time.value, mess.value);
 
