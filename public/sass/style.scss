@@ -132,6 +132,7 @@ section:nth-child(1),
 .location-home,
 .menu-home,
 .booking-home {
+  position: relative;
   min-height: 500px;
   overflow: hidden;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
@@ -185,6 +186,17 @@ section:nth-child(1),
     img {
       height: 20px;
       margin: 20px;
+    }
+  }
+
+  .scroll-down {
+    height: clamp(18px, 2vw, 25px);
+    position: absolute;
+    bottom: 30px;
+
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
 }

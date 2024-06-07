@@ -5,6 +5,12 @@ gsap.from('.menu-home h1, .menu-home p , .menu-home nav', {
     duration: 1.5,
 });
 
+gsap.from('.menu-home .scroll-down', {
+    yPercent: -30,
+    opacity: 0,
+    delay: 1,
+    duration: 1
+})
 
 gsap.from('.menu-more .menu-fullmenu .menu-content', {
     scrollTrigger: {

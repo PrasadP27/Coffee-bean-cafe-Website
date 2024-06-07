@@ -5,6 +5,13 @@ gsap.from('.booking-home h1, .booking-home p , .booking-home nav', {
     duration: 1.5,
 });
 
+gsap.from('.booking-home .scroll-down', {
+    yPercent: -30,
+    opacity: 0,
+    delay: 1,
+    duration: 1
+})
+
 gsap.from('.booking-more .booking-container .booking-img', {
     scrollTrigger: {
         trigger: ".booking-more",

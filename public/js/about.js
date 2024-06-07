@@ -5,6 +5,13 @@ gsap.from('.about-home h1, .about-home p , .about-home nav', {
     duration: 1.5,
 });
 
+gsap.from('.about-home .scroll-down', {
+    yPercent: -30,
+    opacity: 0,
+    delay: 1,
+    duration: 1
+})
+
 let aboutPageTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".about-more",

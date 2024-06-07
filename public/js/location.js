@@ -5,6 +5,13 @@ gsap.from('.location-home h1, .location-home p , .location-home nav', {
     duration: 1.5,
 });
 
+gsap.from('.location-home .scroll-down', {
+    yPercent: -30,
+    opacity: 0,
+    delay: 1,
+    duration: 1
+})
+
 gsap.from('.location-more .location-container article', {
     scrollTrigger: {
         trigger: ".location-more",
