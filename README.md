@@ -21,9 +21,9 @@ Screenshot of the landing page of the website
 
 ## Build with 
 
-**Front-end:** ``Express-Handlebars``, ``Sass``
-**Server-side:** ``Node``,``Express``
-**Libraries & Frameworks:** ``Gsap``,``SwiperJs``, ``FlatPickr``
+**Front-end:** ```Express-Handlebars```, ```Sass```
+**Server-side:** ```Node```, ```Express```
+**Libraries & Frameworks:** ```Gsap```,```SwiperJs```, ```FlatPickr```
 
 
 
