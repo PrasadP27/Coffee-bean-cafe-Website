@@ -21,11 +21,11 @@ Screenshot of the landing page of the website
 
 ## Build with 
 
-**Front-end:** ```Express-Handlebars```, ```Sass```
+```Express-Handlebars```, ```Sass```
 
-**Server-side:** ```Node```, ```Express```
+```Node```, ```Express```
 
-**Libraries & Frameworks:** ```Gsap```,```SwiperJs```, ```FlatPickr```
+```Gsap```,```SwiperJs```, ```FlatPickr```
 
 
 
