@@ -27,6 +27,7 @@ Screenshot of the landing page of the website
 ``Sass``
 ``GSAPJs``
 ``SwiperJS``
+``FlatPickr``
 
 
 ## Prerequisite
@@ -36,7 +37,7 @@ For running the project locally you need Node.js installed on your machine.
 
 ## Deployment
 
-To run this project locally on your machine follow the steps:
+To run this project locally on your machine follow the steps after cloning the project:
 
 ```
   npm i
@@ -53,8 +54,6 @@ npm run dev
 ```
 This will start the server and run on localhost:5000 port.
 
-<br>
-<br>
-[!NOTE]
-<br>
-Booking Page is under development. You will not be able to use the booking page.
+## Support
+
+If you encounter any issues or have any questions about using coffeebeancafe, please open an issue on the repository.
