@@ -4,6 +4,7 @@
 
 .about-more {
     overflow: hidden;
+
     .about-container {
         width: 100%;
         max-width: $maxwidth;
@@ -25,7 +26,7 @@
 
         .about-content {
             height: 100%;
-            margin: auto 30px;
+            margin: 30px;
 
             .heading {
                 font-size: clamp(2.3rem, 7vw, 5.5rem);
@@ -87,7 +88,7 @@
 }
 
 
-@media (max-width: $breakpoint-three) {
+@media (max-width: $breakpoint-four) {
     .about-more .about-container {
         display: block;
         text-align: center;
