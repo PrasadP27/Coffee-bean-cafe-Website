@@ -32,14 +32,24 @@ aboutPageTl.from('.about-more .about-container .about-content', {
     opacity: 0
 })
 
-gsap.from('.about-gallery .gallery-container .gallery', {
+let t1 = gsap.timeline({
     scrollTrigger: {
-        trigger: ".about-gallery",
-        start: '20% 60%',
-        end: '20% 60%',
+        trigger: ".about-gallery .gallery-container ",
+        start: '0% 60%',
+        end: '0% 60%',
         scrub: false,
-        // markers: true,
+        markers: true,
     },
+})
+
+t1.fromTo('.about-gallery .gallery-container .gallery img', {
     opacity: 0,
-    duration: 2
+    yPercent: 30,
+    rotation: 60,
+}, {
+    yPercent: 0,
+    rotation: 0,
+    opacity: 1,
+    stagger: 0.2,
+    ease: "power1.out"
 })
