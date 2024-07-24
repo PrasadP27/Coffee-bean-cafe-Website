@@ -45,10 +45,12 @@ let t1 = gsap.timeline({
 t1.fromTo('.about-gallery .gallery-container .gallery img', {
     opacity: 0,
     yPercent: 30,
-    rotation: 60,
+    // rotation: 60,
+    skewY: 30,
 }, {
     yPercent: 0,
-    rotation: 0,
+    // rotation: 0,
+    skewY: 0,
     opacity: 1,
     stagger: 0.2,
     ease: "power1.out"
