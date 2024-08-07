@@ -19,7 +19,7 @@ let t1 = gsap.timeline({
         start: '20% 60%',
         end: '20% 60%',
         scrub: false,
-        markers: true,
+        // markers: true,
     }
 })
 
